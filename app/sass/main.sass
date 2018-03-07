@@ -4,26 +4,36 @@
 html
   font-family: Arial, sans-serif, Helvetica
 
-.navbar-header .navbar-brand
+/* navigation */
+
+.navbar
+  margin: 0
+  border: none
+  box-shadow: 0 1px 6px 0 rgba(0,0,0,0.15);
+
+.navbar>.container .navbar-brand
   font-size: 2em
   color: #9013FE
+  margin-left: -50%
 
 .nav .nav-item .nav-link
   text-transform: uppercase
-  color: #7D7D7D
+  color: $grey
   padding: 15px 0
   margin: 0 20px
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
 
-
-.nav .nav-item .nav-link:hover
+.nav .nav-item .nav-link:hover,
+.nav .nav-item .nav-link:active,
+.nav .nav-item .nav-link:focus
   background-color: transparent
   border-bottom: 4px solid #292A60
+  padding-bottom: 11px
 
 .nav .nav-item-custom
   padding: 10px 0
-
-.profile
-  line-height: 30px
 
 .profile-img
   width: 30px
@@ -36,12 +46,223 @@ html
 
 .profile-descr
   float: right
-  padding: 5px
-  line-height: 0.8em
+  padding: 0 10px
+  line-height: 14px
 
 .profile-name
   text-transform: uppercase
   font-weight: 600
 
 .profile-num
-  font-size: 0.8em
+  font-size: 12px
+  color: $grey
+
+.icon-bar
+  background-color: $dark-grey
+/* blue section */
+
+.blue-section
+  background-color: #4A90E2
+  box-shadow: 0 2px 4px 0 rgba(74,74,74,0.41)
+  padding-bottom: 15px
+
+.title-block
+  margin: 130px 0 60px 0
+
+.title-circle
+  width: 40px
+  height: 40px
+  -webkit-border-radius: 50%
+  -moz-border-radius: 50%
+  border-radius: 50%
+  background-color: #D8D8D8
+
+.main-title
+  color: #fff
+
+.subtitle-block
+  display: inline-block
+  margin-right: 36px
+
+.num
+  color: $dark-grey
+  font-size: 20px
+
+.num-descr
+  color: #fff
+  text-transform: uppercase
+  font-size: 14px
+
+.button
+  text-transform: uppercase
+  border: none
+  outline: none
+  color: #fff
+  font-size: 16px
+
+.button-title
+  background-color: #34495E
+  padding: 6px 35px
+  margin-right: 24px
+
+.button-title:active
+  background-color: #000
+
+.button-wrapper
+  margin-top: 30px
+
+/*sidebar*/
+
+.button-support
+  width: 100%
+  background-color: #9013FE
+  border-radius: 4px
+  padding: 10px 0
+  margin: 30px 0
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.5)
+
+.button-support:active
+  background-color: rgb(94, 15, 164)
+
+.sidebar
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.5)
+
+.side-block
+  background-color: #fff
+  padding: 15px
+
+  font-weight: 600
+
+.side-block-title
+  text-transform: uppercase
+  font-size: 16px
+  color: $grey
+  margin-top: 5px
+  margin-bottom: 15px
+
+.side-content-title
+  font-size: 18px
+
+.side-sub
+  text-transform: uppercase
+  font-size: 11px
+  color: #BBBBBB
+
+.side-content
+  font-size: 14px
+  font-weight: 500
+  margin-top: 10px
+
+.progress
+  height: 7px
+  background-color: #D8D8D8
+  -webkit-border-radius: 0
+  -moz-border-radius: 0
+  border-radius: 0
+
+.progress .progress-bar
+  background-color: #1C1E70
+
+/*white section*/
+
+.white-section
+  margin-top: 10px
+  margin-bottom: 30px
+
+/*sidebar*/
+
+.updates
+  margin-top: -40px
+
+.updates .side-block:nth-child(1)
+  border-bottom: 1px solid #D8D8D8
+
+.profile-sidebar
+  float: left
+  margin-top: 20px
+
+.profile-sidebar .side-sub
+  margin-bottom: 5px
+
+.nav-tabs
+  border-bottom: 3px solid #ddd
+
+.nav-tabs>li>a
+  color: #D8D8D8
+  text-transform: uppercase
+  font-size: 18px
+  font-weight: 800
+  border: none
+  margin: 0
+  position: relative
+  z-index: 5;
+
+.nav-tabs>li>a:hover,
+.nav-tabs>li>a:active,
+.nav-tabs>li>a:focus,
+.nav-tabs>li>a:visited,
+  color: #2B2B2B
+  background-color: transparent
+  border: none
+  -webkit-border-radius: 0
+  -moz-border-radius: 0
+  border-radius: 0
+  border-bottom: 3px solid #1C1E70
+  margin-bottom: -2px
+
+
+/* media queries */
+
+@media only screen and (min-width: 320px)
+  .navbar>.container .navbar-brand
+    margin-left: 0
+    
+  .button-title
+    margin-right: 0
+
+  .updates
+    margin-top: 30px
+
+  .nav-tabs > li > a
+    padding: 5px
+
+@media (min-width: 480px)
+  .navbar>.container .navbar-brand
+    margin-left: 0
+
+  .button-title
+    margin-right: 24px
+
+  .updates
+    margin-top: 20px
+
+  .nav-tabs > li > a
+    padding: 15px
+
+
+@media (min-width: 768px)
+  .navbar>.container .navbar-brand
+    margin-left: 0
+
+  .updates
+    margin-top: 20px
+
+  .nav-tabs > li > a
+    padding: 15px
+
+@media (min-width: 992px)
+  .navbar>.container .navbar-brand
+    margin-left: 0
+
+  .nav-tabs > li > a
+    padding: 15px
+
+@media (min-width: 1200px)
+  .navbar>.container .navbar-brand
+    margin-left: -50%
+
+  .nav-tabs > li > a
+    padding: 15px
+
+
+
